@@ -2,6 +2,8 @@
 
 Specialized Claude Code agents for structured, spec-driven development workflows that minimize context usage while maximizing development quality and success rates.
 
+I think most people are experimenting with spec-driven design to keep the AI on task and help minimize rule follow errors or other problems. I will keep this up to date with what I find are the current best practices.
+
 ## Why Sub-Agents?
 
 Claude Code's sub-agent system allows you to create specialized agents with focused roles and custom instructions. This approach provides:
