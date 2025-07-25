@@ -1,0 +1,83 @@
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Claude
+.claude/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.#*
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+.vim/
+
+# Log files
+*.log
+logs/
+
+# Node.js (if any JavaScript tools are used)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if any Python tools are used)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Shell script temporary files
+*.sh.bak
+*.bak
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# OS generated files
+Icon?
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Backup directories and files
+backup/
+*.backup
+*_backup
+*_bak
+
+# Test artifacts
+test-results/
+coverage/
+*.coverage
