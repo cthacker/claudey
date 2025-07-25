@@ -2,9 +2,8 @@
 
 Specialized Claude Code agents for structured, spec-driven development workflows that minimize context usage while maximizing development quality and success rates.
 
-<<<<<<< HEAD
 I think most people are experimenting with spec-driven design to keep the AI on task and help minimize rule follow errors or other problems. I will keep this up to date with what I find are the current best practices.
-=======
+
 ## Architecture
 
 ```
@@ -47,7 +46,6 @@ I think most people are experimenting with spec-driven design to keep the AI on 
 │  • Iterative refinement - Improve over time           │
 └───────────────────────────────────────────────────────┘
 ```
->>>>>>> aed4b18 (add diagram to README)
 
 ## Why Sub-Agents?
 
