@@ -2,7 +2,52 @@
 
 Specialized Claude Code agents for structured, spec-driven development workflows that minimize context usage while maximizing development quality and success rates.
 
+<<<<<<< HEAD
 I think most people are experimenting with spec-driven design to keep the AI on task and help minimize rule follow errors or other problems. I will keep this up to date with what I find are the current best practices.
+=======
+## Architecture
+
+```
+               CLAUDEY AGENT SYSTEM
+              Structured Development
+┌───────────────────────────────────────────────────────┐
+│                       Two Workflow Paths              │
+├─────────────────────┬─────────────────────────────────┤
+│    PRODUCT-FIRST    │         ENGINEERING-FIRST       │
+│   (User Features)   │         (Technical Tasks)       │
+│                     │                                 │
+│  ┌─────────────┐    │        ┌─────────────┐          │
+│  │     PRD     │    │        │   PLANNER   │          │
+│  │ (Product    │    │        │ (EARS       │          │
+│  │ Manager)    │    │        │ Requirements│          │
+│  └─────────────┘    │        │ Analyst)    │          │
+│         │           │        └─────────────┘          │
+│         ▼           │               │                 │
+│  ┌─────────────┐    │               ▼                 │
+│  │ TASKER_PRD  │    │        ┌─────────────┐          │
+│  │ (Product    │◄───┼────────┤    ARCH     │          │
+│  │ Task Gen)   │    │        │ (Software   │          │
+│  └─────────────┘    │        │ Architect)  │          │
+│         │           │        └─────────────┘          │
+│         ▼           │               │                 │
+│  ┌─────────────┐    │               ▼                 │
+│  │             │    │        ┌─────────────┐          │
+│  │   CODER     │◄───┼────────┤   TASKER    │          │
+│  │ (Task       │    │        │ (Task       │          │
+│  │ Executor)   │    │        │ Generator)  │          │
+│  └─────────────┘    │        └─────────────┘          │
+│                     │               │                 │
+│                     │               ▼                 │
+├─────────────────────┴─────────────────────────────────┤
+│                      Common Components                │
+│                                                       │
+│  • Context efficiency - Fresh start per agent         │
+│  • Role specialization - Focused instructions         │
+│  • Quality standards - Built-in testing & review      │
+│  • Iterative refinement - Improve over time           │
+└───────────────────────────────────────────────────────┘
+```
+>>>>>>> aed4b18 (add diagram to README)
 
 ## Why Sub-Agents?
 
@@ -16,10 +61,10 @@ Claude Code's sub-agent system allows you to create specialized agents with focu
 
 ## Two Approaches
 
-**Product-First** (`prd` → `arch` → `tasker_prd` → `coder`)  
+**Product-First** (`prd` → `arch` → `tasker_prd` → `coder`)
 For user-facing features. Starts with product requirements, user stories, and success metrics.
 
-**Engineering-First** (`planner` → `arch` → `tasker` → `coder`)  
+**Engineering-First** (`planner` → `arch` → `tasker` → `coder`)
 For technical improvements. Starts with EARS-format technical requirements and system specifications.
 
 ## Agents
@@ -52,7 +97,7 @@ Use the tasker_prd agent to break this into implementation tasks
 Use the coder agent to implement the first task
 ```
 
-### Engineering-First Workflow  
+### Engineering-First Workflow
 ```
 Use the planner agent to create requirements for [technical concept]
 Use the tasker agent to break this into implementation tasks
@@ -62,7 +107,7 @@ Use the coder agent to implement the first task
 ## Benefits
 
 - **Reduced context length** - Each agent focuses on specific tasks
-- **Higher success rates** - Specialized agents with clear responsibilities  
+- **Higher success rates** - Specialized agents with clear responsibilities
 - **Better quality** - Structured workflows with built-in testing and review
 - **Flexible approach** - Choose product-first or engineering-first based on your needs
 
