@@ -20,11 +20,7 @@
 ## Project Structure
 
 <!-- Update to reflect your actual project layout -->
-- `src/` — application source code
-- `tests/` — test files
 - `docs/` — documentation
-- `scripts/` — build and utility scripts
-- `config/` — configuration files
 
 ## Critical Thinking
 
@@ -64,7 +60,7 @@
 - Use `gh` CLI for GitHub-specific operations (creating repos, PRs, issues, etc.).
 - Use `git` CLI for standard git operations (commits, branches, push, pull, etc.).
 - Do NOT add "Co-Authored-By: Claude" lines to commit messages.
-- Use convenctional commits and keep commits/PRs/messages concise and action‑oriented.
+- Use conventional commits and keep commits/PRs/messages concise and action‑oriented.
 - PR descriptions should be minimal — a single sentence or short bullet list is sufficient.
 - PR descriptions must use real newlines (no literal `\n` sequences). Use a short **Summary** section plus a **Testing** section.
 - Before creating a PR, run `npm test` and `npm run build` (or the relevant test/build commands) and confirm they pass.
