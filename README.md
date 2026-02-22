@@ -52,7 +52,7 @@ make install-global-codex
 make install-project PROJECT_DIR=/path/to/project
 ```
 
-All installs use symlinks so this repo remains the source of truth — updates here propagate immediately.
+Skill installs use symlinks so this repo remains the source of truth — updates here propagate immediately. Template install copies `AGENTS.md` into the target project and links `CLAUDE.md` to that local `AGENTS.md` so each repo can customize independently.
 
 ## Customization
 

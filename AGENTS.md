@@ -1,25 +1,27 @@
 # Project Name
-<!-- Replace "Project Name" with your actual project name -->
 
-<!-- ## Project Overview -->
-<!-- Brief description of what this project does and its purpose. -->
+## Project Overview
+> Brief description of what this project does and its purpose.
 
-<!-- ## Tech Stack -->
-<!-- - Language: -->
-<!-- - Framework: -->
-<!-- - Database: -->
-<!-- - Other key dependencies: -->
+## Tech Stack
+> - Language:
+> - Framework:
+> - Database:
+> - Other key dependencies:
 
-<!-- ## Getting Started -->
-<!-- ```bash -->
-<!-- # Install dependencies -->
-<!-- # Start development server -->
-<!-- # Run tests -->
-<!-- ``` -->
+## Getting Started
+> ```bash
+> # Install dependencies
+> # Start development server
+> # Run tests
+> ```
 
 ## Project Structure
 
-<!-- Update to reflect your actual project layout -->
+> Update to reflect your actual project layout.
+
+- `src/` — application source code
+- `tests/` — test files
 - `docs/` — documentation
 
 ## Critical Thinking
@@ -82,28 +84,30 @@
 
 ## Testing
 
-<!-- Update framework and commands for your project -->
+> Update framework and commands for your project.
 
 Commands:
 - `<test-command>` — run all tests
 - `<test-watch-command>` — watch mode
 - `<test-coverage-command>` — with coverage report
 
-<!-- Update naming conventions for your project -->
+> Update naming conventions for your project.
+
 Naming convention: `*.test.*` for unit tests, `*.e2e.test.*` for e2e tests.
 
 ### Key Commands
 
-<!-- Add your project-specific commands here -->
+> Add your project-specific commands here.
+
 | Command | What It Does |
 |---------|--------------|
 | `<command>` | `<description>` |
 
-<!-- ## Development Conventions -->
-<!-- - Code style: -->
-<!-- - Naming conventions: -->
-<!-- - Branch strategy: -->
-<!-- - PR process: -->
+## Development Conventions
+> - Code style:
+> - Naming conventions:
+> - Branch strategy:
+> - PR process:
 
-<!-- ## Important Notes -->
-<!-- - Any gotchas, workarounds, or things Claude should know about. -->
+## Important Notes
+> - Any gotchas, workarounds, or things Claude should know about.

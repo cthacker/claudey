@@ -24,7 +24,7 @@ help:
 	@echo "  make install-project PROJECT_DIR=/path/to/project"
 	@echo "  make install-project-claude PROJECT_DIR=/path/to/project"
 	@echo "  make install-project-codex PROJECT_DIR=/path/to/project"
-	@echo "  make install-template PROJECT_DIR=/path/to/project"
+	@echo "  make install-template PROJECT_DIR=/path/to/project   # copy AGENTS.md + link CLAUDE.md"
 
 install: install-global
 
@@ -67,6 +67,6 @@ install-project-codex: check-project-dir
 	@echo "Done: Codex project skills linked in $(PROJECT_DIR)/.agents/skills"
 
 install-template: check-project-dir
-	@ln -sfn "$(REPO_ROOT)/AGENTS.md" "$(PROJECT_DIR)/AGENTS.md"
+	@cp -f "$(REPO_ROOT)/AGENTS.md" "$(PROJECT_DIR)/AGENTS.md"
 	@ln -sfn AGENTS.md "$(PROJECT_DIR)/CLAUDE.md"
-	@echo "Done: CLAUDE.md and AGENTS.md linked in $(PROJECT_DIR)"
+	@echo "Done: AGENTS.md copied and CLAUDE.md linked in $(PROJECT_DIR)"
