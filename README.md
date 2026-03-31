@@ -54,6 +54,30 @@ make install-project PROJECT_DIR=/path/to/project
 
 Skill installs use symlinks so this repo remains the source of truth — updates here propagate immediately. Template install copies `AGENTS.md` into the target project and links `CLAUDE.md` to that local `AGENTS.md` so each repo can customize independently.
 
+## Supply Chain Security — Minimum Release Age
+
+All projects using this template **must** enforce a 14-day minimum release age on package installations. This is configured in `AGENTS.md` and should be applied to every project.
+
+### Why?
+
+Supply chain attacks on package registries (npm, PyPI, crates.io, etc.) have increased sharply. The attack pattern is consistent: a malicious version is published, and within hours it's pulled into CI pipelines and developer machines via automated installs. Most compromised packages are detected and yanked within days — but by then, the damage is done.
+
+A 14-day cooldown means you never install a package version that the community hasn't had time to vet. This single setting blocks the majority of supply chain attacks with zero developer friction.
+
+### Quick reference
+
+| Package Manager | Config File | Setting |
+|---|---|---|
+| **npm** (v11.10+) | `.npmrc` | `min-release-age=14` |
+| **pnpm** (v10.16+) | `pnpm-workspace.yaml` | `minimumReleaseAge: 20160` |
+| **Yarn** (v4.10+) | `.yarnrc.yml` | `npmMinimalAgeGate: "14d"` |
+| **uv** (v0.9.17+) | `pyproject.toml` | `exclude-newer = "14 days"` under `[tool.uv]` |
+| **pip** (v26.0+) | CLI flag | `--uploaded-prior-to <date>` |
+
+For cargo, Go, Bundler, Maven/Gradle, and Composer (no native support yet), pin exact versions in lock files and only update through reviewed PRs.
+
+If the project uses **Dependabot** or **Renovate** for automated dependency updates, configure cooldowns there too — `minimumReleaseAge: "14 days"` (Renovate) or `cooldown.default-days: 14` (Dependabot). These gate when update PRs are *opened*, which is a separate layer from the install-time controls above.
+
 ## Customization
 
 - **CLAUDE.md** — Uncomment the commented-out sections and fill in your project's details (overview, tech stack, conventions). The active sections (debugging, git, testing) are ready to use as-is or can be tweaked.
