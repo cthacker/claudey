@@ -74,6 +74,30 @@
 - After PR is created, ask user if ready to squash and merge.
 - Once merged, delete the old branch and pull main before starting the next phase branch.
 
+## Supply Chain Security — Minimum Release Age
+
+All projects **must** enforce a minimum package release age of **14 days**. This prevents installation of recently-published package versions, which are the primary vector for supply chain attacks (typosquatting, account takeovers, malicious updates). Most compromised packages are detected and removed within days of publication — a 14-day cooldown lets the community catch threats before they reach your lockfile.
+
+Configure the appropriate setting for your package manager:
+
+| Package Manager | Config File | Setting |
+|---|---|---|
+| **npm** (v11.10+) | `.npmrc` | `min-release-age=14` |
+| **pnpm** (v10.16+) | `pnpm-workspace.yaml` | `minimumReleaseAge: 20160` (minutes) |
+| **Yarn** (v4.10+) | `.yarnrc.yml` | `npmMinimalAgeGate: "14d"` |
+| **uv** (v0.9.17+) | `pyproject.toml` | `[tool.uv]` → `exclude-newer = "14 days"` |
+| **pip** (v26.0+) | CLI only | `--uploaded-prior-to <ISO-8601 date 14 days ago>` |
+
+For package managers without native support (cargo, Go modules, Bundler, Maven/Gradle, Composer), pin exact versions in lock files and only update dependencies through reviewed PRs.
+
+Additionally, if the project uses **Dependabot** or **Renovate** for automated dependency update PRs, configure cooldowns there too:
+- **Renovate** — `minimumReleaseAge: "14 days"` in `renovate.json`
+- **Dependabot** — `cooldown` block with `default-days: 14` in `.github/dependabot.yml`
+
+These gate when update PRs are *opened*, which is a separate layer from the install-time controls above — configure both.
+
+When setting up a new project or adding a package manager, configure this **before** the first install.
+
 ## Do Not
 
 - Do not commit directly to `main`.
