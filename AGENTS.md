@@ -65,14 +65,11 @@
 - Use conventional commits and keep commits/PRs/messages concise and action‑oriented.
 - PR descriptions should be minimal — a single sentence or short bullet list is sufficient.
 - PR descriptions must use real newlines (no literal `\n` sequences). Use a short **Summary** section plus a **Testing** section.
-- Before creating a PR, run `npm test` and `npm run build` (or the relevant test/build commands) and confirm they pass.
 - Before merging, perform a code review of the PR (focus on correctness, regressions, and missing tests).
+- All work should happen on a feature branch. If not on one, create one. Do not commit directly to `main/develop`.
 - After committing, push to origin.
-- Do not commit directly to `main`.
-- Create a branch per phase or large task
-- After pushing a branch, create a PR with `gh pr create`.
-- After PR is created, ask user if ready to squash and merge.
-- Once merged, delete the old branch and pull main before starting the next phase branch.
+- After pushing a branch, create a PR with gh pr create.
+- When ready squash+merge, delete the old branch and pull main before starting the next work.
 
 ## Supply Chain Security — Minimum Release Age
 
