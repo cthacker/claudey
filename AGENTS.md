@@ -36,7 +36,7 @@
 - **Always update `docs/tasks.md`** when completing a task — mark items as `[x]` and add any relevant notes (credentials, decisions, etc.).
 - Keep tasks atomic: update the task file as soon as a task is done, not in bulk at the end.
 - `tasks.md` should stay a clean execution checklist, not a running journal or log.
-- Keep notes short; update docs when behavior/API changes.
+- Keep notes short; update all relevant docs when behavior/API changes, architecture is updated, design is updated, or other important changes have been made.
 
 ## Debugging & Failures
 
